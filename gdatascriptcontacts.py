@@ -11,15 +11,12 @@ from oauth2client import clientsecrets
 from oauth2client import transport
 from oauth2client import client
 
-
-
 GOOGLE_CLIENT_ID = '81802460251-example.apps.googleusercontent.com' # -example - not real Provided in the APIs console
 GOOGLE_CLIENT_SECRET = '18WgKRPSwdjjsawbOVgAXzcZNrOW-W3' # -example - not real secret  Provided in the APIs console
-ACCESS_TOKEN = ''
-REFRESH_TOKEN = '1//04KSv5y8sd76fsdf678sdRAAGAQSNwF-L9skljhnf9djs8dsd87s3j8orMhcg28bB4btGqC1ePKXQlxA3shSM0M2GyFMoFtj6RoHmQ'
-
 GOOGLE_TOKEN_URI = 'https://oauth2.googleapis.com/token'
 GOOGLE_REVOKE_URI = 'https://oauth2.googleapis.com/revoke'
+ACCESS_TOKEN = ''
+REFRESH_TOKEN = '1//04KSv5y8sd76fsdf678sdRAAGAQSNwF-L9skljhnf9djs8dsd87s3j8orMhcg28bB4btGqC1ePKXQlxA3shSM0M2GyFMoFtj6RoHmQ'
 
 resp=''
 ident=''
