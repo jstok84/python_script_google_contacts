@@ -51,7 +51,8 @@ resp=resp['access_token']
 http = credentials.authorize(httplib2.Http())  # apply the credentials
 access_token = resp
 #JSON with access token
-r=requests.get('https://www.google.com/m8/feeds/contacts/default/full?&access_token=%s&alt=json&v=3.0&max-results=1000&start-index=0&group=https://www.google.com/m8/feeds/groups/example@gmail.com/base/427197236335e4d2' % access_token) # example - google contacts groupID - label
+r=requests.get('https://www.google.com/m8/feeds/contacts/default/full?&access_token=%s&alt=json&v=3.0&max-results=1000&start-index=0&group=https://www.google.com/m8/feeds/groups/example@gmail.com/base/4271963ndz335e4d2' % access_token) 
+# 4271963ndz335e4d2 - example - google contacts groupID - label
 data= json.loads(r.text);
 #id
 #data=data['feed']['entry'][0]['id']['$t']
@@ -64,7 +65,6 @@ data= json.loads(r.text);
 #Surname
 #data=data['feed']['entry'][1]['gd$name']['gd$familyName']['$t']
 
-
 for test in data['feed']['entry']:
     ident=test['id']['$t']
     res=ident.rsplit('/',1)
@@ -75,10 +75,6 @@ for test in data['feed']['entry']:
     rel=test['gd$phoneNumber'][0]['rel']
     print (rel)
     telnum=test['gd$phoneNumber'][0]['$t']
-    gecos='*#'+telnum[-3:]
-    print(gecos)
-    pager=telnum[-3:]
-    print(pager)
     print (telnum)
     name=test['gd$name']['gd$givenName']['$t']
     print (name)
